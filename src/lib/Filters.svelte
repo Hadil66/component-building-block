@@ -65,9 +65,16 @@
 		overflow: scroll;
 		display: flex;
         margin-left: 1em;
+        width: 20em;
 	}
     ::-webkit-scrollbar {
         display: none;
+    }
+
+    @media (min-width: 600px) {
+        .filter {
+            width: max-content;
+        }
     }
 
 </style>
