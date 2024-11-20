@@ -6,14 +6,14 @@
 
 <Filters />
 
-{#each data.artObjects as art}
+<!-- {#each data.artObjects as art}
     <ul class="masonry">
         <li class="masonry-item" data-category= "{art.techniques}">
             <h2>{art.title}</h2>
             <img src={"https://fdnd-agency.directus.app/assets/" + art.image} alt={art.title} width="200px" />
         </li>
     </ul>
-{/each}
+{/each} -->
 
  <style>
     	.masonry {
