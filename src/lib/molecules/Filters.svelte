@@ -4,12 +4,13 @@
 <input type="radio" id="Tapestry" name="categories" value="Tapestry">
 <input type="radio" id="Glass" name="categories" value="Glass">
 
-<ul class="filter" >
-    <li tabindex="0"><label for="All objects"> All objects </label></li>
-    <li tabindex="0"><label for="Pottery"> Pottery </label></li>
-    <li tabindex="0"><label for="Islamic art"> Islamic art </label></li>
-    <li tabindex="0"><label for="Tapestry"> Tapestry </label></li>
-    <li><label for="Glass"> Glass </label></li>
+<ul class="filter" >    
+
+    <li><button data-filter="*" tabindex="0">All objects</button></li>
+    <li><button data-filter="Pottery" tabindex="0">Pottery</button></li>
+    <li><button data-filter="Islamic art" tabindex="0">Islamic art</button></li>
+    <li><button data-filter="Tapestry" tabindex="0">Tapestry</button></li>
+    <li><button data-filter="Glass" tabindex="0">Glass</button></li>
 </ul>
 
 <style>
@@ -22,10 +23,24 @@
     {
         background-color: rgb(0, 0, 0, 0.7);
     }
-
+    
     input[type="radio"] {
         position: absolute;
         left: -9999px;
+    }
+
+    .filter {
+        bottom: 5em;
+        display: flex;
+        margin: 0;
+        overflow: scroll;
+        padding: 0;
+        position: fixed;
+        width: 25em;
+        z-index: 268;
+    }
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     .filter label, .filter li  {
@@ -33,10 +48,6 @@
     }
 
     @media (prefers-reduced-motion) {
-        .filter li {
-            transition: 1s;
-        }
-
         .filter li:focus, .filter li:hover {
             box-shadow: 2px 2px 2px #989802;
             background-color: #ffff00;
@@ -63,19 +74,12 @@
         color: #000;
     }
 
-    .filter {
-        bottom: 5em;
-        display: flex;
-        margin: 0;
-        overflow: scroll;
-        padding: 0;
-        position: fixed;
-        width: 25em;
-        z-index: 268;
+    .filter li button {
+        background: none;
+        border: none;
+        color: white;
     }
-    ::-webkit-scrollbar {
-        display: none;
-    }
+
 
     @media (min-width: 600px) {
         .filter {
