@@ -32,7 +32,7 @@
         cursor: pointer;
     }
 
-    @media (prefers-reducedotion) {
+    @media (prefers-reduced-motion) {
         .filter li {
             background-color: #464646;
             border: none;
