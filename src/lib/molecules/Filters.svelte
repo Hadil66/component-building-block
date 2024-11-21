@@ -14,11 +14,11 @@
 
 <style>
         
-    [value="All objects"]:checked ~ .masonry .masonry-item:not([data-category~="All objects"]),
-    [value="Pottery"]:checked ~ .masonry .masonry-item:not([data-category~="Pottery"]),
-    [value="Islamic art"]:checked ~ .masonry .masonry-item:not([data-category~="Islamic art"]),
-    [value="Tapestry"]:checked ~ .masonry .masonry-item:not([data-category~="Tapestry"]),
-    [value="Glass"]:checked ~ .masonry .masonry-item:not([data-category~="Glass"]) 
+    [value="All objects"]:checked .masonry .masonry-item:not([data-category~="All objects"]),
+    [value="Pottery"]:checked .masonry .masonry-item:not([data-category~="Pottery"]),
+    [value="Islamic art"]:checked .masonry .masonry-item:not([data-category~="Islamic art"]),
+    [value="Tapestry"]:checked .masonry .masonry-item:not([data-category~="Tapestry"]),
+    [value="Glass"]:checked .masonry .masonry-item:not([data-category~="Glass"]) 
     {
         background-color: rgb(0, 0, 0, 0.7);
     }
@@ -34,16 +34,6 @@
 
     @media (prefers-reduced-motion) {
         .filter li {
-            background-color: #464646;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 18px;
-            margin: 0.5em;
-            padding: 0.5em;
-            width: 80px;
-            text-align: center;
-            list-style-type: "";
             transition: 1s;
         }
 
