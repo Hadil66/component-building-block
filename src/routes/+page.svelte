@@ -16,7 +16,7 @@
 {/each}
 
  <style>
-    	.masonry {
+    .masonry {
 		column-count: 1;
 		column-gap: 1rem;
 		list-style: none;
