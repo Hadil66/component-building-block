@@ -69,9 +69,11 @@
         transition: 0.5s;
     }
 
-    .filter li:focus, .filter li:hover {
-        box-shadow: inset 6.5em 0 0 0 #ffff00;
-        color: #000;
+    @media (prefers-reduced-motion: no-preference) {
+        .filter li:focus, .filter li:hover {
+            box-shadow: inset 6.5em 0 0 0 #ffff00;
+            color: #000;
+        }
     }
 
     .filter li button {
