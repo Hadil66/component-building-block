@@ -6,11 +6,11 @@
 
 <ul class="filter" >    
 
-    <li><button data-filter="*" tabindex="0">All objects</button></li>
-    <li><button data-filter="Pottery" tabindex="0">Pottery</button></li>
-    <li><button data-filter="Islamic art" tabindex="0">Islamic art</button></li>
-    <li><button data-filter="Tapestry" tabindex="0">Tapestry</button></li>
-    <li><button data-filter="Glass" tabindex="0">Glass</button></li>
+    <li tabindex="0"><button data-filter="*">All objects</button></li>
+    <li tabindex="0"><button data-filter="Pottery">Pottery</button></li>
+    <li tabindex="0"><button data-filter="Islamic art">Islamic art</button></li>
+    <li tabindex="0"><button data-filter="Tapestry">Tapestry</button></li>
+    <li tabindex="0"><button data-filter="Glass">Glass</button></li>
 </ul>
 
 <style>
@@ -30,15 +30,19 @@
     }
 
     .filter {
-        bottom: 5em;
-        display: flex;
-        margin: 0;
-        overflow: scroll;
-        padding: 0;
-        position: fixed;
-        width: 25em;
-        z-index: 268;
-    }
+    bottom: 5em;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    overflow: scroll;
+    padding: 0;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25em;
+    z-index: 268;
+}
+
     ::-webkit-scrollbar {
         display: none;
     }
@@ -72,7 +76,6 @@
     @media (prefers-reduced-motion: no-preference) {
         .filter li:focus, .filter li:hover {
             box-shadow: inset 6.5em 0 0 0 #ffff00;
-            color: #000;
         }
     }
 
@@ -81,6 +84,12 @@
         border: none;
         color: white;
     }
+
+    .filter li:hover button, .filter li:focus button {
+
+        color: #000;
+    }
+
 
 
     @media (min-width: 600px) {
