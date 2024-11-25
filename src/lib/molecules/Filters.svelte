@@ -26,7 +26,7 @@
     
     input[type="radio"] {
         position: absolute;
-        left: -9999px;
+        left: -999px;
     }
 
     .filter {
